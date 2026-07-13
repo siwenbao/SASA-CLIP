@@ -1,0 +1,22 @@
+Action class: {label}
+Temporal descriptor count: 3
+Spatial descriptor count: 3
+Temporal stage order: [start, middle, end]
+
+Return ONLY this JSON object schema:
+{
+  "temporal": [
+    {"stage": "start", "text": "..."},
+    {"stage": "middle", "text": "..."},
+    {"stage": "end", "text": "..."}
+  ],
+  "spatial": ["...", "...", "..."]
+}
+
+Hard output constraints:
+- temporal length = 3
+- spatial length = 3
+- temporal items must follow exact stage order above
+- each temporal item's stage must exactly equal the required token at that index
+- each temporal descriptor must capture a visually DISTINCT phase
+- no markdown or code fences
